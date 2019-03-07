@@ -1,6 +1,5 @@
 #-*- coding: utf-8 -*-
 import random
-import timeit
 
 def Collatz_Maker(num) :
     numlist.append([num,len(numlist) + 1])
@@ -77,14 +76,12 @@ Upto = 1000001
 randomBox = list(range(1, Upto))
 #random.shuffle(randomBox) <- 필요없음
 
-start = timeit.default_timer()
 
 for num in randomBox :
     #if not num in list(CollatzDict.keys()) :
     numlist = []
     Collatz_Maker(num)
 
-end = timeit.default_timer()
 
 
 highest = What_is_best(CollatzDict)
