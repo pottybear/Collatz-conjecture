@@ -34,8 +34,15 @@ def collatz_pair(n):
     return collatz(n), n
 
 
+def fst(x):
+    return x[0]
+
+
+collatz_pair_fst_len = compose(len, fst, collatz_pair)
+
+
 if __name__ == '__main__':
     MAX = 5
     xs = range(1, MAX + 1)
-    ys = map(collatz_pair, xs)
-    print(ys)
+    ys = map(collat_pair_fst_len, xs)
+    for y in ys: print(y)
