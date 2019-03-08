@@ -72,12 +72,9 @@ CollatzDict = {}
 Upto = 1000001
 randomBox = range(1, Upto)
 
-
-for num in randomBox :
-    #if not num in list(CollatzDict.keys()) :
+for num in randomBox:
     numlist = []
     Collatz_Maker(num)
-
 
 highest = What_is_best(CollatzDict)
 how_long = CollatzDict[highest]
@@ -86,5 +83,4 @@ numlist = []
 
 print_everythings(highest)
 
-
-print("\n" ,(end - start),"초") 
+print("\n" ,(end - start),"초")
