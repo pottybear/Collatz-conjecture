@@ -1,6 +1,3 @@
-from functools import reduce
-
-
 def even(n):
     return n % 2 == 0
 
