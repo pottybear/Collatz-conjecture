@@ -22,14 +22,6 @@ def compose2(f, g):
     return lambda x: f(g(x))
 
 
-def compose(*functions):
-    
-    def id(x):
-        return x
-    
-    return reduce(compose2, functions, id)
-
-
 def head(x):
     return x[0]
 
@@ -38,11 +30,14 @@ def len_head_pair(xs):
     return len(xs), head(xs)
 
 
-collatz_len_head_pair = compose(len_head_pair, collatz)
+collatz_len_head_pair = compose2(len_head_pair, collatz)
+
+
+input_int = compose2(int, input)
 
 
 if __name__ == '__main__':
-    MAX = 5
-    xs = range(1, MAX + 1)
+    MAX = input_int('')
+    xs = range(1, MAX+1)
     ys = map(collatz_len_head_pair, xs)
-    for y in ys: print(y)
+    print(max(ys))
