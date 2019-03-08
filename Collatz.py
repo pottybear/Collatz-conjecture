@@ -69,8 +69,8 @@ def print_everythings(num_keys) :
 
 
 CollatzDict = {}
-Upto = 1000001
-randomBox = range(1, Upto)
+UPTO = 1000001
+randomBox = range(1, UPTO)
 
 for num in randomBox:
     numlist = []
