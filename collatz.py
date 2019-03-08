@@ -44,5 +44,5 @@ collatz_pair_fst_len = compose(len, fst, collatz_pair)
 if __name__ == '__main__':
     MAX = 5
     xs = range(1, MAX + 1)
-    ys = map(collat_pair_fst_len, xs)
+    ys = map(collatz_pair_fst_len, xs)
     for y in ys: print(y)
