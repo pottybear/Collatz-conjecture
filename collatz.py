@@ -1,4 +1,4 @@
-fron functools import reduce
+from functools import reduce
 
 
 def even(n):
