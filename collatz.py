@@ -30,19 +30,19 @@ def compose(*functions):
     return reduce(compose2, functions, id)
 
 
-def collatz_pair(n):
-    return collatz(n), n
-
-
-def fst(x):
+def head(x):
     return x[0]
 
 
-collatz_pair_fst_len = compose(len, fst, collatz_pair)
+def len_head_pair(xs):
+    return len(xs), head(xs)
+
+
+collatz_len_head_pair = compose(len_head_pair, collatz)
 
 
 if __name__ == '__main__':
     MAX = 5
     xs = range(1, MAX + 1)
-    ys = map(collatz_pair_fst_len, xs)
+    ys = map(collatz_len_head_pair, xs)
     for y in ys: print(y)
