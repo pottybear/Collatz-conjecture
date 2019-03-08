@@ -30,9 +30,12 @@ def compose(*functions):
     return reduce(compose2, functions, id)
 
 
+def collatz_pair(n):
+    return collatz(n), n
+
+
 if __name__ == '__main__':
     MAX = 5
-    collatz_len = compose(len, collatz)
     xs = range(1, MAX + 1)
-    ys = map(collatz_len, xs)
-    for y in ys: print(y)
+    ys = map(collatz_pair, xs)
+    print(ys)
