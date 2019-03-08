@@ -13,6 +13,9 @@ def collatz(n):
         return [n] + collatz(n // 2)
     elif odd(n):
         return [n] + collatz(n*3 + 1)
+    
+def compose2(f, g):
+    return lambda x: f(g(x))
 
 
 if __name__ == '__main__':
