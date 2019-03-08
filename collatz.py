@@ -31,8 +31,8 @@ def compose(*functions):
 
 
 if __name__ == '__main__':
-    input_int = compose(int, input)
-    collatz_print = compose(print, collatz)
-    
-    n = input_int('')
-    collatz_print(n)
+    MAX = 5
+    collatz_len = compose(len, collatz)
+    xs = range(1, MAX + 1)
+    ys = map(collatz_len, xs)
+    for y in ys: print(y)
