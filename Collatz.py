@@ -1,5 +1,3 @@
-import random
-
 def Collatz_Maker(num) :
     numlist.append([num,len(numlist) + 1])
 
@@ -49,6 +47,7 @@ def What_is_best(CollatzDict) :
         if num_values == bestnum :
             return num_keys
 
+        
 def print_everythings(num_keys) :
     printCollatz = []
     Collatz_Maker(num_keys)
@@ -67,20 +66,17 @@ def print_everythings(num_keys) :
 
 ==> %s
 '''%(Upto, num_keys, how_long, printCollatz ))
-    
 
 
 CollatzDict = {}
 Upto = 1000001
 randomBox = range(1, Upto)
-#random.shuffle(randomBox) <- 필요없음
 
 
 for num in randomBox :
     #if not num in list(CollatzDict.keys()) :
     numlist = []
     Collatz_Maker(num)
-
 
 
 highest = What_is_best(CollatzDict)
