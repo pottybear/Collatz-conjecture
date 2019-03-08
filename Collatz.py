@@ -72,7 +72,7 @@ def print_everythings(num_keys) :
 
 CollatzDict = {}
 Upto = 1000001
-randomBox = list(range(1, Upto))
+randomBox = range(1, Upto)
 #random.shuffle(randomBox) <- 필요없음
 
 
